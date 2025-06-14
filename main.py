@@ -37,7 +37,7 @@ print("------------------------------")
 print("Trenowanie modelu: Drzewo Decyzyjne...")
 
 # Tworzymy obiekt modelu Drzewa Decyzyjnego.
-drzewo_decyzyjne = DecisionTreeClassifier(random_state=42, min_samples_leaf=10)
+drzewo_decyzyjne = DecisionTreeClassifier(random_state=42, min_samples_leaf=3)
 
 # Trenujemy model na danych treningowych
 drzewo_decyzyjne.fit(X_train, y_train)
@@ -62,7 +62,7 @@ print("Trenowanie modelu: Las Losowy...")
 
 # Tworzymy obiekt modelu Lasu Losowego.
 # n_estimators=100 -> model będzie się składał ze 100 drzew decyzyjnych.
-las_losowy = RandomForestClassifier(n_estimators=100, random_state=42, min_samples_leaf=2)
+las_losowy = RandomForestClassifier(n_estimators=200, random_state=42, min_samples_leaf=2)
 
 # Trenujemy model na tych samych danych treningowych.
 las_losowy.fit(X_train, y_train)
